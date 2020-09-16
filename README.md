@@ -101,7 +101,7 @@ __init__.py  _scaffold
 ~/myappforgae/apps(master) $ ls
 _default  __init__.py
 
-~/myappforgae/apps(master) $ ln -sf /home/jacinto/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps/_default /home/jacinto/PROGRAMACION/TESTS/py4web-gae-example/apps/myappforgae
+~/myappforgae/apps(master) $ ln -sf /home/py4web-gae-example/myappforgae/apps/_default /home/py4web-gae-example/apps/myappforgae
 ```
 
 

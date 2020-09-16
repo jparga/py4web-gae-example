@@ -62,9 +62,6 @@ apps  app.yaml  index.yaml  lib  main.py  Makefile  requirements.txt
 
 ```
 
-#### Deploy in gae
-
-[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae(master) $ gcloud app deploy app.yaml -v=3 --no-promote
 
 
 ### Access from py4web local _dashboard
@@ -80,7 +77,42 @@ This way you can access the application from py4web _dashboard
 
 [py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/apps(master) $ ls
 _dashboard  _default  _documentation  __init__.py  _minimal  myappforgae  _scaffold
+ 
+```
+### Your application code
 
-[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/apps(master) $ 
-``` 
+You can replace de _default application in myappforgae for the application you want an rename it to defaul. You have to rebuitl the symlink again
 
+```
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example(master) $ cp -r apps/_scaffold myappforgae/apps/
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example(master) $ cd myappforgae/apps
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps(master) $ ls
+_default  __init__.py  _scaffold
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps(master) $ rm -r _default
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps(master) $ ls
+__init__.py  _scaffold
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps(master) $ mv _scaffold _default
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps(master) $ ls
+_default  __init__.py
+
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps(master) $ ln -sf /home/jacinto/PROGRAMACION/TESTS/py4web-gae-example/myappforgae/apps/_default /home/jacinto/PROGRAMACION/TESTS/py4web-gae-example/apps/myappforgae
+```
+
+
+#### Deploy in gae
+
+It is very important you first run the application from dahsboard if you use the default DB_URI = "sqlite://storage.db"
+
+Otherwise an error will occur because you cannot create the databases file in GAE, as it does not allow writing to the file system.
+
+```
+[py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae(master) $ gcloud app deploy app.yaml -v=0 --promote
+```
+
+The aplication has been deployed in https://best-try.appspot.com

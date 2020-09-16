@@ -107,7 +107,7 @@ _default  __init__.py
 
 ## Deploy in gae
 
-** It is very important you first run the application from dahsboard if you use DB_URI = "sqlite://storage.db" **
+**It is very important you first run the application from dahsboard if you use DB_URI = "sqlite://storage.db"**
 
 Otherwise an error will occur because you cannot create the databases file in GAE, as it does not allow writing to the file system.
 

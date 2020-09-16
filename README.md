@@ -24,7 +24,11 @@ https://groups.google.com/g/py4web/c/mtQSHVHODrc/m/oB4vBdTJEwAJ
 ```
 [py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example(master) $ ls
 apps  LICENSE  myappforgae  README.md
+```
 
+myappforgae stands for demployment_tools/gae
+
+```
 [py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example(master) $ cd myappforgae
 
 [py4web382] jac@PCXX:~/PROGRAMACION/TESTS/py4web-gae-example/myappforgae(master) $ ls

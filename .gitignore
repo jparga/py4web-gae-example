@@ -1,5 +1,8 @@
 # Google App Engine generated folder
+
+appengine-generated/
+
 .git/
 .gitignore
-appengine-generated/
-password.txt
+
+passdword.txt

@@ -1,0 +1,15 @@
+{
+    "Hello World from {name}": {
+        "0": "Hola mundo de parte de {name}"
+    },
+    "thing": {
+        "0": "cosa",
+        "1": "cosas"
+    },
+    "Made with": {
+        "0": "Hecho con "
+    },
+    "Hello": {
+        "0": "Hola"
+    }
+}

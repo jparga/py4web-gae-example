@@ -5,4 +5,7 @@ appengine-generated/
 .git/
 .gitignore
 
-passdword.txt
+password.txt
+ *.pyc
+/apps/__pycache__/*.*
+/apps/default/__pycache__/*.*

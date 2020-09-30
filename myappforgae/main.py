@@ -3,7 +3,10 @@ import site
 
 site.addsitedir(os.path.join(os.path.dirname(__file__), "lib"))
 
-from py4web.core import Reloader, bottle  # Esto tiene que ir aquí, después de marcar el path de lib
+from py4web.core import (
+    Reloader,
+    bottle,
+)  # Esto tiene que ir aquí, después de marcar el path de lib
 
 os.environ["PY4WEB_DASHBOARD_MODE"] = "demo"
 os.environ["PY4WEB_SERVICE_DB_URI"] = "sqlite:memory"  # "google:datastore"  #

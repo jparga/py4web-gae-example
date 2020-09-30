@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <base href="[[=URL('static')]]/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAAQEAAAEAIAAwAAAAFgAAACgAAAABAAAAAgAAAAEAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAA=="/>
-    <link rel="stylesheet" href="css/no.css">
-    <link rel="stylesheet" href="[[=URL('static', 'font-awesome-4.7.0/css/font-awesome.css')]]">
-    <style>.py4web-validation-error{margin-top:-16px; font-size:0.8em;color:red}</style>
-    [[block page_head]]<!-- individual pages can customize header here -->[[end]]
+    <base href="[[=URL('static')]]/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="data:image/x-icon;base64,AAABAAEAAQEAAAEAIAAwAAAAFgAAACgAAAABAAAAAgAAAAEAIAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAA=="
+    />
+    <link rel="stylesheet" href="css/no.css" />
+    <link
+      rel="stylesheet"
+      href="[[=URL('static', 'font-awesome-4.7.0/css/font-awesome.css')]]"
+    />
+    <style>
+      .py4web-validation-error {
+        margin-top: -16px;
+        font-size: 0.8em;
+        color: red;
+      }
+    </style>
+    [[block page_head]]
+    <!-- individual pages can customize header here -->
+    [[end]]
   </head>
   <body>
     <header>
@@ -15,11 +29,16 @@
       <nav class="black">
         <!-- Logo -->
         <a href="[[=URL('index')]]">
-          <b>py4web <script>document.write(window.location.href.split('/')[3]);</script></b>
+          <b
+            >py4web
+            <script>
+              document.write(window.location.href.split("/")[3]);
+            </script></b
+          >
         </a>
         <!-- Do not touch this -->
         <label for="hamburger">☰</label>
-        <input type="checkbox" id="hamburger">
+        <input type="checkbox" id="hamburger" />
         <!-- Left menu ul/li -->
         [[block page_left_menu]][[end]]
         <!-- Right menu ul/li -->
@@ -45,7 +64,10 @@
         </ul>
       </nav>
       <!-- Flash alert messages, first optional one in data-alert -->
-      <flash-alerts class="padded" data-alert="[[=globals().get('flash','')]]"></flash-alerts>
+      <flash-alerts
+        class="padded"
+        data-alert="[[=globals().get('flash','')]]"
+      ></flash-alerts>
     </header>
     <!-- beginning of HTML inserted by extending template -->
     <div>
@@ -56,9 +78,7 @@
     </div>
     <!-- end of HTML inserted by extending template -->
     <footer class="black padded">
-      <p>
-        Made with py4web
-      </p>
+      <p>[[=TT('Made with')]] Made with py4web</p>
     </footer>
   </body>
   <!-- You've gotta have utils.js -->

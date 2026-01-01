@@ -114,5 +114,3 @@ Otherwise an error will occur because you cannot create the databases file in GA
 ```
 ~/myappforgae(master) $ gcloud app deploy app.yaml -v=0 --promote
 ```
-
-The aplication has been deployed in https://best-try.appspot.com/best
